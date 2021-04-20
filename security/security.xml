@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="module_category_mmf" model="ir.module.category">
+        <field name="name">Mutual Medical Fund</field>
+        <field name="descriptaion">Mutual Medical Fund</field>
+        <field name="sequence">45</field>
+    </record>
+
+    <!-- Start Code This Group And Rules department / admin -->
+     <record id="group_department_admin_rule" model="res.groups">
+        <field name="name">Department / Admin</field>
+        <field name="category_id" ref="module_category_mmf"/>
+    </record>
+    
+    <record id="record_department_admin_user" model="ir.rule">
+        <field name="name">record department admin user</field>
+        <field name="model_id" ref="model_mmf_form"/>
+        <field name="domain_force">[]</field>
+        <field name="groups" eval="[(4, ref('group_department_admin_rule'))]"/>
+    </record>
+    <!-- Finsh Code Group department -->
+
+
+    <!-- Start Code This Group And Rules user -->
+    <record id="group_user_rule" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="module_category_mmf"/>
+    </record>
+
+    <record id="record_rules_user" model="ir.rule">
+        <field name="name">record rules user</field>
+        <field name="model_id" ref="model_mmf_form"/>
+        <field name="domain_force">[('user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_user_rule'))]"/>
+    </record>
+    <!-- Finsh Code Group user -->
+
+    <record id="form_multi_company_rule" model="ir.rule">
+        <field name="name">form Multi Company</field>
+        <field name="model_id" ref="model_mmf_form"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('hospital_id','=',False),('hospital_id','=',user.hospital_id.id)]</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="invoice_multi_company_rule" model="ir.rule">
+        <field name="name">invoice Multi Company</field>
+        <field name="model_id" ref="model_mmf_invoice"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('hospital_id','=',False),('hospital_id','=',user.hospital_id.id)]</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="service_multi_company_rule" model="ir.rule">
+        <field name="name">service Multi Company</field>
+        <field name="model_id" ref="model_mmf_service"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('hospital_id','=',False),('hospital_id','=',user.hospital_id.id)]</field>
+        <field name="active" eval="True"/>
+    </record>
+
+    <record id="hospital_dashboard_rule" model="ir.rule">
+        <field name="name">Hospital Dashboard</field>
+        <field name="model_id" ref="model_mmf_hospital_dashboard"/>
+        <field name="domain_force">[('hospital_id','=',user.hospital_id.id)]</field>
+        <field name="active" eval="True"/>
+        <field name="global" eval="False"/>
+        <field name="groups" eval="[(4, ref('group_user_rule'))]"/>
+    </record>
+
+    <record id="admin_hospital_dashboard_rule" model="ir.rule">
+        <field name="name">Admin Hospital Dashboard</field>
+        <field name="model_id" ref="model_mmf_hospital_dashboard"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="active" eval="True"/>
+        <field name="groups" eval="[(4, ref('group_department_admin_rule'))]"/>
+    </record>
+
+</odoo>

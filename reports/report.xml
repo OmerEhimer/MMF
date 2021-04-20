@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- PDF And HTML report -->
+    <report
+        id="report_approve_request"
+        model="mmf.form"
+        string="Approve Request"
+        report_type="qweb-html"
+        name="mmf.approve_request"
+        file="mmf.approve_request"
+    />  
+        
+    <report
+        id="report_request_service"
+        model="mmf.form"
+        string="Request For Service"
+        report_type="qweb-html"
+        name="mmf.request_service"
+        file="mmf.request_service"
+    />  
+
+    <!-- monthly report  -->
+    <report
+        id="monthly_total_report"
+        model="monthly.total"
+        string="Report Monthly Total"
+        report_type="qweb-html"
+        name="mmf.report_monthly"
+        file="mmf.report_monthly" 
+    />      
+
+    <!-- frequency  report  -->
+    <report
+        id="frequency_reports"
+        model="frequency.report.wizard"
+        string="Frequency Report Hospital"
+        report_type="qweb-html"
+        name="mmf.frequency_report_hospital"
+        file="mmf.frequency_report_hospital" 
+    />  
+
+
+     <!-- frequency  report  -->
+    <report
+        id="services_request_wizard"
+        model="reprot.services.request"
+        string="Report Services Request"
+        report_type="qweb-html"
+        name="mmf.services_request_report"
+        file="mmf.services_request_report" 
+    />          
+
+</odoo>

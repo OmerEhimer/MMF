@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="monthly_total_for_hospitals" model="ir.ui.view">
+        <field name="name">Monthly Total For Hospital </field>
+        <field name="model">monthly.total</field>
+        <field name="arch" type="xml">
+            <form string="Monthly Total For Hospital">
+                <group>
+                    <group>
+                         <field name="company_id"/>
+                    </group>
+                    <group>
+                        <field name="year"/>
+                        <field name="month"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="monthly_total_for_hospital_action" model="ir.actions.act_window">
+        <field name="name">Monthly Total For Hospital</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">monthly.total</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="monthly_total_for_hospitals"/>
+        <field name="target">new</field>       
+    </record>
+
+    <menuitem id="menu_report" name="Report" parent="mmf_menu"  groups="mmf.group_department_admin_rule"/>
+    <menuitem id="monthly_total_for_hospital"  name="Monthly Total Benefits Report For Hospital"  parent="menu_report"  action="monthly_total_for_hospital_action" sequence="1" />
+
+</odoo>

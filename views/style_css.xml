@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="mmf assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/mmf/static/description/css/my_style.css"/>
+            </xpath>
+        </template>
+    </data>     
+</openerp>

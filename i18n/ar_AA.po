@@ -1,0 +1,1679 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mmf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-07 16:02+0000\n"
+"PO-Revision-Date: 2021-03-07 16:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_mmf_service_lines
+#: model:ir.model,name:mmf.model_mmf_service_wait_lines
+msgid " Services Lines"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,state:0
+msgid " Wait Manager Approve"
+msgstr "في إنتظار التصديق"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<b> الخـدمــة </b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<b> السعــر </b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<b><u><strong> :  بيانات الاستمارة </strong> </u></b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<b><u><strong> : بيانــات المـريـض </strong> </u></b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+msgid "<b>صندوق التكافل لتطوير الخدمات الطبية</b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+msgid "<b>طلب تصديق خدمة </b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+msgid "<b>طلب تقديم خدمة </b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+msgid "<b>قوات الدعم السريع</b>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.test_kanban_view
+msgid "<i class=\"fa fa-bars fa-lg\" title=\"Manage\" aria-label=\"Manage\"/>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong>  / طبيب  </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong>  :   أسم المريض </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong>  حــامد موسي أمبيلو  </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong> :  أسم المنــدوب   </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong> :  النـــوع </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong> :  نـــوع الزيــارة </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong> : تـــاريخ الزيــارة </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong> : رقم الاستمارة   </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_test_mmf
+msgid "<strong>Full Name</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_test_mmf
+msgid "<strong>Gander</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>ID</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_test_mmf
+msgid "<strong>Middle Name</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>أسم المريض</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>أسم المستشفي</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>التاريخ</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>السعر</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong>العمر :   </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+msgid "<strong>النـــوع  : </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong>بسم الله الرحمن الرحيم </strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+msgid "<strong>بسم الله الرحمن الرحيم</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>تقرير التردد</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>جهه التحويل</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "<strong>حالة الزيارة</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+#: model_terms:ir.ui.view,arch_db:mmf.request_service
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong>صندوق التكافل لتطوير الخدمات الطبية</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<strong>قوات الدعم السريع</strong>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "<u><strong>   :   التشخيـــص المـبدئي </strong> </u>"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.approve_request
+msgid "<u><strong>  التشخيـــص المـبدئي : </strong> </u>"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_needaction
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_needaction
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_needaction
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_needaction
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__activity_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__activity_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__activity_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__activity_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__activity_state
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__activity_state
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__activity_state
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__activity_state
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__Age
+msgid "Age"
+msgstr "العمر"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_res_company__count_approve
+#: selection:mmf.form,state:0
+msgid "Approve"
+msgstr "تصديق"
+
+#. module: mmf
+#: model:ir.actions.report,name:mmf.report_approve_request
+msgid "Approve Request"
+msgstr "طلب تصديق"
+
+#. module: mmf
+#: selection:mmf.service.wait.lines,state:0
+msgid "Approved"
+msgstr "تم التأكيد"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__approved_by
+msgid "Approved By"
+msgstr "تم التاكيد من"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__attachment
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__attachment
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__attachment
+#: model:ir.model.fields,field_description:mmf.field_request_service__attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_attachment_count
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_attachment_count
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_attachment_count
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_attachment_count
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.convert_service_wizard_form
+#: model_terms:ir.ui.view,arch_db:mmf.create_first_Wizard
+#: model_terms:ir.ui.view,arch_db:mmf.create_frequencu_report
+#: model_terms:ir.ui.view,arch_db:mmf.monthly_total_for_hospitals
+#: model_terms:ir.ui.view,arch_db:mmf.reprot_services_requests
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__card_no
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__card_no
+msgid "Card NO"
+msgstr "رقم البطاقة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__category
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_search
+msgid "Category"
+msgstr "فئة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__month
+msgid "Chooes Month"
+msgstr "الشهر"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__company_id
+msgid "Choose Hospital"
+msgstr "المستشفى"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__year
+msgid "Choose Year"
+msgstr "السنة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_res_company__count_close
+#: selection:mmf.form,state:0
+msgid "Close"
+msgstr "العملية تمت"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_res_company__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_res_company
+msgid "Companies"
+msgstr "المؤسسات"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_search
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_invoice_search
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: mmf
+#: model:ir.ui.menu,name:mmf.mmf_config_menu
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: mmf
+#: selection:mmf.form,state:0
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.convert_service_wizard_form
+msgid "Convert"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.mmf_form_action
+#: model:ir.model,name:mmf.model_mmf_form
+#: model:ir.ui.menu,name:mmf.mmf_form_menu
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_search
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_tree
+msgid "Convert Form"
+msgstr "إستمارة تحويل"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__convertFormDate
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__convertFormDate
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__convertFormDate
+msgid "Convert Form Date"
+msgstr "تاريخ التحويلة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__name_seq
+msgid "Convert Form ID"
+msgstr "المتسلسل"
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_mmf_service
+msgid "Convert Service"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_mmf_service_type
+msgid "Convert Service Type"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__convert_type
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__convert_type
+msgid "Convert Type"
+msgstr "نوع التحويلة"
+
+#. module: mmf
+#: selection:mmf.form,convert_type:0
+#: selection:mmf.invoice,convert_type:0
+#: selection:mmf.service.wait.lines,state:0
+msgid "Converted"
+msgstr "تحويل"
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.create_first_Wizards
+msgid "Create First Wizard"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__create_uid
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__create_uid
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__create_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__create_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__create_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__create_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__create_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__create_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__create_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__create_uid
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__create_uid
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__create_uid
+#: model:ir.model.fields,field_description:mmf.field_request_service__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__create_date
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__create_date
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__create_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__create_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__create_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__create_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__create_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__create_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__create_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__create_date
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__create_date
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__create_date
+#: model:ir.model.fields,field_description:mmf.field_request_service__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: mmf
+#: model_terms:ir.actions.act_window,help:mmf.mmf_dashboard_action
+#: model:ir.actions.act_window,name:mmf.mmf_dashboard_action
+#: model:ir.ui.menu,name:mmf.mmf_dash_menu
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__date_start
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__date_start
+msgid "Date Start"
+msgstr "تاريخ البداية"
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.mmf_department_action
+#: model:ir.model,name:mmf.model_mmf_department
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__department_id
+#: model:ir.ui.menu,name:mmf.mmf_department_menu
+msgid "Department"
+msgstr "الجهه المحولة"
+
+#. module: mmf
+#: model:res.groups,name:mmf.group_department_admin_rule
+msgid "Department / Admin"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__discount
+msgid "Discount"
+msgstr "تخفيض"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__discount
+msgid "Discount %"
+msgstr "نسبه التخفيض"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__display_name
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__display_name
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__display_name
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__display_name
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__display_name
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__display_name
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__display_name
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__display_name
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__display_name
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__display_name
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__display_name
+#: model:ir.model.fields,field_description:mmf.field_report_mmf_frequency_report_hospital__display_name
+#: model:ir.model.fields,field_description:mmf.field_report_mmf_report_monthly__display_name
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__display_name
+#: model:ir.model.fields,field_description:mmf.field_request_service__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+#: selection:mmf.service.lines,state:0
+msgid "Done"
+msgstr "تم"
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.dashboard_draft_mmf
+#: model:ir.model.fields,field_description:mmf.field_res_company__count_draft
+#: selection:mmf.form,state:0
+#: selection:mmf.service.lines,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__end_date
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__end_date
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: mmf
+#: selection:mmf.form,relation_type:0
+msgid "Father"
+msgstr "اب"
+
+#. module: mmf
+#: selection:create.first.wizard,gender:0
+#: selection:mmf.form,gender:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: mmf
+#: selection:mmf.form,convert_type:0
+#: selection:mmf.invoice,convert_type:0
+msgid "Follow up"
+msgstr "متابعة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_follower_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_follower_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_follower_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_follower_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_channel_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_channel_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_channel_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_channel_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_partner_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_partner_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_partner_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_partner_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__form_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__form_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__form_id
+#: model:ir.model.fields,field_description:mmf.field_request_service__form_id
+msgid "Form"
+msgstr "النموذج"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__form_id
+msgid "Form ID"
+msgstr "المتسلسل"
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.frequencu_report_action
+#: model:ir.ui.menu,name:mmf.Frequency_report
+#: model_terms:ir.ui.view,arch_db:mmf.create_frequencu_report
+msgid "Frequency Report"
+msgstr "تقرير التردد"
+
+#. module: mmf
+#: model:ir.actions.report,name:mmf.frequency_reports
+msgid "Frequency Report Hospital"
+msgstr "تقرير التردد"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__gender
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__gender
+msgid "Gender"
+msgstr "النوع"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_search
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_invoice_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: mmf
+#: selection:frequency.report.wizard,report_by:0
+#: model:ir.model.fields,field_description:mmf.field_convert_service__company_id
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__company_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__company_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__company_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__company_id
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__company_id
+msgid "Hospital"
+msgstr "المستشفي"
+
+#. module: mmf
+#: selection:mmf.form,relation_type:0
+msgid "Husband/Wife"
+msgstr "زوج/زوجة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__id
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__id
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__id
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__id
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__id
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__id
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__id
+#: model:ir.model.fields,field_description:mmf.field_report_mmf_frequency_report_hospital__id
+#: model:ir.model.fields,field_description:mmf.field_report_mmf_report_monthly__id
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__id
+#: model:ir.model.fields,field_description:mmf.field_request_service__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mmf
+#: model:ir.model.fields,help:mmf.field_mmf_department__message_unread
+#: model:ir.model.fields,help:mmf.field_mmf_form__message_unread
+#: model:ir.model.fields,help:mmf.field_mmf_invoice__message_unread
+#: model:ir.model.fields,help:mmf.field_mmf_service__message_unread
+#: model:ir.model.fields,help:mmf.field_mmf_service_type__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: mmf
+#: model:ir.model.fields,help:mmf.field_mmf_department__message_needaction
+#: model:ir.model.fields,help:mmf.field_mmf_form__message_needaction
+#: model:ir.model.fields,help:mmf.field_mmf_invoice__message_needaction
+#: model:ir.model.fields,help:mmf.field_mmf_service__message_needaction
+#: model:ir.model.fields,help:mmf.field_mmf_service_type__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: mmf
+#: model:ir.model.fields,help:mmf.field_mmf_department__message_has_error
+#: model:ir.model.fields,help:mmf.field_mmf_form__message_has_error
+#: model:ir.model.fields,help:mmf.field_mmf_invoice__message_has_error
+#: model:ir.model.fields,help:mmf.field_mmf_service__message_has_error
+#: model:ir.model.fields,help:mmf.field_mmf_service_type__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__initial_diagnosis
+msgid "Initial Diagnosis"
+msgstr "التشخيص المبدئي"
+
+#. module: mmf
+#: code:addons/mmf/models/mmf_form.py:143
+#, python-format
+msgid "Invalid Convert Form Date"
+msgstr ""
+
+#. module: mmf
+#: code:addons/mmf/models/mmf_form.py:167
+#, python-format
+msgid "Invalid Phone Number..."
+msgstr "رقم هاتف خاطئ"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__name_seq
+msgid "Invoice ID ID"
+msgstr "رقم الفاتورة"
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_mmf_invoice
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_is_follower
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_is_follower
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_is_follower
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_is_follower
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service____last_update
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard____last_update
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard____last_update
+#: model:ir.model.fields,field_description:mmf.field_mmf_department____last_update
+#: model:ir.model.fields,field_description:mmf.field_mmf_form____last_update
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice____last_update
+#: model:ir.model.fields,field_description:mmf.field_mmf_service____last_update
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines____last_update
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type____last_update
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines____last_update
+#: model:ir.model.fields,field_description:mmf.field_monthly_total____last_update
+#: model:ir.model.fields,field_description:mmf.field_report_mmf_frequency_report_hospital____last_update
+#: model:ir.model.fields,field_description:mmf.field_report_mmf_report_monthly____last_update
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request____last_update
+#: model:ir.model.fields,field_description:mmf.field_request_service____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__write_uid
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__write_uid
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__write_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__write_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__write_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__write_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__write_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__write_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__write_uid
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__write_uid
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__write_uid
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__write_uid
+#: model:ir.model.fields,field_description:mmf.field_request_service__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__write_date
+#: model:ir.model.fields,field_description:mmf.field_create_first_wizard__write_date
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__write_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__write_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__write_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__write_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__write_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__write_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__write_date
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__write_date
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__write_date
+#: model:ir.model.fields,field_description:mmf.field_reprot_services_request__write_date
+#: model:ir.model.fields,field_description:mmf.field_request_service__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__location
+msgid "Location"
+msgstr "السكن"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_main_attachment_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_main_attachment_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_main_attachment_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_main_attachment_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: mmf
+#: selection:create.first.wizard,gender:0
+#: selection:mmf.form,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_has_error
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_has_error
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_has_error
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_has_error
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_ids
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__month
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__month
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__month
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_search
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_invoice_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: mmf
+#: model:ir.ui.menu,name:mmf.monthly_total_for_hospital
+msgid "Monthly Total Benefits Report For Hospital"
+msgstr "تقرير عن اﻹستحقاقات الشهرية للمستشفيات"
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.monthly_total_for_hospital_action
+#: model_terms:ir.ui.view,arch_db:mmf.monthly_total_for_hospitals
+msgid "Monthly Total For Hospital"
+msgstr "تقرير عن اﻹستحقاقات الشهرية للمستشفيات"
+
+#. module: mmf
+#: selection:mmf.form,relation_type:0
+msgid "Mother"
+msgstr "أم"
+
+#. module: mmf
+#: model:ir.module.category,name:mmf.module_category_mmf
+#: model:ir.ui.menu,name:mmf.mmf_menu
+msgid "Mutual Medical Fund"
+msgstr "الصندوق التكافلي لتطوير الخدمات الطبية"
+
+#. module: mmf
+#: model:ir.module.category,description:mmf.module_category_mmf
+msgid "Mutual Medical Fund Category"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__name
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__name_ar
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__name
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__need_approve
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__need_approve
+msgid "Need Approve"
+msgstr "يحتاج الي موافقة"
+
+#. module: mmf
+#: code:addons/mmf/models/mmf_form.py:17
+#: code:addons/mmf/models/mmf_form.py:106
+#: code:addons/mmf/models/mmf_form.py:107
+#: code:addons/mmf/models/mmf_invoice.py:12
+#: code:addons/mmf/models/mmf_invoice.py:30
+#: code:addons/mmf/models/mmf_invoice.py:31
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: mmf
+#: selection:mmf.form,convert_type:0
+#: selection:mmf.invoice,convert_type:0
+msgid "New Convert"
+msgstr "جديد"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_request_service__new_service_price
+msgid "New Service Price"
+msgstr "السعر الجديد"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__activity_date_deadline
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__activity_date_deadline
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__activity_date_deadline
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__activity_date_deadline
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__activity_summary
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__activity_summary
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__activity_summary
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__activity_summary
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__activity_type_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__activity_type_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__activity_type_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__activity_type_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "No Convert Form Found"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_needaction_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_needaction_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_needaction_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_needaction_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_has_error_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_has_error_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_has_error_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_has_error_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: mmf
+#: model:ir.model.fields,help:mmf.field_mmf_department__message_needaction_counter
+#: model:ir.model.fields,help:mmf.field_mmf_form__message_needaction_counter
+#: model:ir.model.fields,help:mmf.field_mmf_invoice__message_needaction_counter
+#: model:ir.model.fields,help:mmf.field_mmf_service__message_needaction_counter
+#: model:ir.model.fields,help:mmf.field_mmf_service_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: mmf
+#: model:ir.model.fields,help:mmf.field_mmf_department__message_has_error_counter
+#: model:ir.model.fields,help:mmf.field_mmf_form__message_has_error_counter
+#: model:ir.model.fields,help:mmf.field_mmf_invoice__message_has_error_counter
+#: model:ir.model.fields,help:mmf.field_mmf_service__message_has_error_counter
+#: model:ir.model.fields,help:mmf.field_mmf_service_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: mmf
+#: model:ir.model.fields,help:mmf.field_mmf_department__message_unread_counter
+#: model:ir.model.fields,help:mmf.field_mmf_form__message_unread_counter
+#: model:ir.model.fields,help:mmf.field_mmf_invoice__message_unread_counter
+#: model:ir.model.fields,help:mmf.field_mmf_service__message_unread_counter
+#: model:ir.model.fields,help:mmf.field_mmf_service_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__officer
+msgid "Officer"
+msgstr "رتبة الضابط"
+
+#. module: mmf
+#: selection:mmf.department,activity_state:0
+#: selection:mmf.form,activity_state:0
+#: selection:mmf.invoice,activity_state:0
+#: selection:mmf.service,activity_state:0
+#: selection:mmf.service.type,activity_state:0
+msgid "Overdue"
+msgstr "المستحقات المتأخرة"
+
+#. module: mmf
+#: selection:frequency.report.wizard,report_by:0
+msgid "Patient"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__patient_name
+msgid "Patient Name"
+msgstr "أسم المريض"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__patient_name
+#: model:ir.model.fields,field_description:mmf.field_request_service__patient_name
+msgid "Patinet Name"
+msgstr "إسم المريض"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__phone
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: mmf
+#: selection:mmf.department,activity_state:0
+#: selection:mmf.form,activity_state:0
+#: selection:mmf.invoice,activity_state:0
+#: selection:mmf.service,activity_state:0
+#: selection:mmf.service.type,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: mmf
+#: code:addons/mmf/models/mmf_form.py:236
+#, python-format
+msgid "Please attach document for Convert"
+msgstr "فضلا قم بارفاق مستند التحويل"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__price
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__price
+msgid "Price"
+msgstr "سعر"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__price_word
+msgid "Price in word"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.create_first_Wizard
+#: model_terms:ir.ui.view,arch_db:mmf.create_frequencu_report
+#: model_terms:ir.ui.view,arch_db:mmf.monthly_total_for_hospitals
+#: model_terms:ir.ui.view,arch_db:mmf.reprot_services_requests
+msgid "Print"
+msgstr "طباعة"
+
+#. module: mmf
+#: selection:mmf.service.wait.lines,state:0
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__relation_type
+msgid "Relation Type"
+msgstr "نوع العلاقة"
+
+#. module: mmf
+#: model:ir.ui.menu,name:mmf.menu_report
+msgid "Report"
+msgstr "التقارير"
+
+#. module: mmf
+#: model:ir.actions.report,name:mmf.patient_appointment
+msgid "Report Appointment"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_frequency_report_wizard__report_by
+msgid "Report By"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.report,name:mmf.send_to_report_type
+msgid "Report MMF"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.report,name:mmf.monthly_total_report
+msgid "Report Monthly Total"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.reprot_services_request_action
+#: model:ir.actions.report,name:mmf.services_request_wizard
+#: model_terms:ir.ui.view,arch_db:mmf.reprot_services_requests
+msgid "Report Services Request"
+msgstr "تقرير طلب الخدمات"
+
+#. module: mmf
+#: model:ir.ui.menu,name:mmf.reprot_services_request
+msgid "Report Services request"
+msgstr "تقرير طلب الخدمات"
+
+#. module: mmf
+#: model:ir.actions.report,name:mmf.report_request_service
+msgid "Request For Service"
+msgstr " طلب تقديم خدمة"
+
+#. module: mmf
+#: selection:mmf.form,state:0
+msgid "Request Processed"
+msgstr "تمت معالجة الطلب"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.service_wizard_form
+msgid "Request Service"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__activity_user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__activity_user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__activity_user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__activity_user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__created_by
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__user_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__created_by
+#: model:ir.model.fields,field_description:mmf.field_request_service__user_id
+msgid "Resposible"
+msgstr "المسؤول "
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.mmf_service_action
+#: model:ir.model.fields,field_description:mmf.field_convert_service__service_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__service_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__service_id
+#: model:ir.model.fields,field_description:mmf.field_request_service__service_id
+#: model:ir.ui.menu,name:mmf.mmf_service_menu
+msgid "Service"
+msgstr "الخدمة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__serviceDate
+msgid "Service Date"
+msgstr "تاريخ الخدمة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__service_line
+msgid "Service ID"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_convert_service__service_price
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__service_price
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__service_price
+#: model:ir.model.fields,field_description:mmf.field_request_service__service_price
+msgid "Service Price"
+msgstr "سعر الخدمة"
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.mmf_service_type_action
+#: model:ir.model.fields,field_description:mmf.field_convert_service__service_type_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__service_type_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__service_type_id
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__service_type_id
+#: model:ir.model.fields,field_description:mmf.field_request_service__service_type_id
+#: model:ir.ui.menu,name:mmf.mmf_service_type_menu
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_service_form
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_service_tree
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_service_type_service_form
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_service_type_tree
+msgid "Service Type"
+msgstr "نوع الخدمة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__service_wait_line
+msgid "Service Wait ID"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,relation_type:0
+msgid "Son/Daughter"
+msgstr "إبن/إبنة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__state
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__state
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_wait_lines__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: mmf
+#: model:ir.model.fields,help:mmf.field_mmf_department__activity_state
+#: model:ir.model.fields,help:mmf.field_mmf_form__activity_state
+#: model:ir.model.fields,help:mmf.field_mmf_invoice__activity_state
+#: model:ir.model.fields,help:mmf.field_mmf_service__activity_state
+#: model:ir.model.fields,help:mmf.field_mmf_service_type__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_lines__total
+msgid "Sub Total"
+msgstr "أجمالي المبلغ"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_res_company__day_price
+msgid "This Day"
+msgstr "إجمالي اليوم"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_res_company__month_price
+msgid "This Month"
+msgstr " إجمالي الشهر"
+
+#. module: mmf
+#: selection:mmf.department,activity_state:0
+#: selection:mmf.form,activity_state:0
+#: selection:mmf.invoice,activity_state:0
+#: selection:mmf.service,activity_state:0
+#: selection:mmf.service.type,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__price_total
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_invoice_tree
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_unread
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_unread
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_unread
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_unread
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_department__message_unread_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__message_unread_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__message_unread_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_service__message_unread_counter
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_service_type__update_price
+#: model:ir.model.fields,field_description:mmf.field_request_service__update_price
+msgid "Update Price"
+msgstr "تحديث السعر"
+
+#. module: mmf
+#: model:res.groups,name:mmf.group_user_rule
+msgid "User"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_res_company__count_wait
+#: selection:mmf.service.wait.lines,state:0
+msgid "Wait"
+msgstr "في الانتظار"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__warrant_officer
+msgid "Warrant Officer"
+msgstr "رتبة ضابط الصف"
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__year
+#: model:ir.model.fields,field_description:mmf.field_mmf_invoice__year
+#: model:ir.model.fields,field_description:mmf.field_monthly_total__year
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_search
+msgid "Year"
+msgstr "السنه"
+
+#. module: mmf
+#: code:addons/mmf/models/mmf_form.py:197
+#, python-format
+msgid "You Must be Select One Service..."
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.dashboard_approve_mmf
+msgid "approve"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.dashboard_close_mmf
+msgid "close"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.convert_service_wizard_form
+msgid "convert Service"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.convert_service_wizard
+msgid "convert Service "
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_convert_service
+msgid "convert.service"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.create_first_Wizard
+msgid "create first Wizard"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_create_first_wizard
+msgid "create.first.wizard"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_department_form
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_department_tree
+msgid "department Type"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model.fields,field_description:mmf.field_mmf_form__form_date
+msgid "form Date"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_frequency_report_wizard
+msgid "frequency.report.wizard"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.mmf_invoice_action
+#: model:ir.ui.menu,name:mmf.mmf_invoice_menu
+msgid "invoice"
+msgstr "الفواتير"
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_invoice_form
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_invoice_tree
+msgid "invoice Type"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_monthly_total
+msgid "monthly.total"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_report_mmf_frequency_report_hospital
+msgid "report.mmf.frequency_report_hospital"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_report_mmf_report_monthly
+msgid "report.mmf.report_monthly"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_reprot_services_request
+msgid "reprot.services.request"
+msgstr ""
+
+#. module: mmf
+#: model:ir.model,name:mmf.model_request_service
+msgid "request.service"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.dashboard_wait_mmf
+msgid "wait"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+msgid "أستحقاق الخدمات لشهر"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "أغسطس"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "أكتوبر"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+msgid "إجمالي مبــلغ الخدمات المقدمة من طرفكم هو عباره عن ("
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "إغلاق"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.service_wizard_form
+msgid "إلغاء"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "ابريل"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "البيانات الشخصية"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "البيانات الطبية"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "الخدمات المطلوبة"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+msgid "السيــد  / مدير"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "الى تاريخ"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "الي"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "بداية من تاريخ"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "تأكيد"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "تحويل"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "تصديق المدير"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "تقرير طلب الخدمات"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,warrant_officer:0
+msgid "جندي"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+msgid "جنيه سوداني لا غير"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "خدمات في إنتظار التصديق"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "ديسمبر"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,warrant_officer:0
+msgid "ر.أول"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "رائد"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "رفض"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,warrant_officer:0
+msgid "رقيب"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "سبتمبر"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "شهر"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,category:0
+msgid "ضابط"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,category:0
+msgid "ضابط صف/جندي"
+msgstr ""
+
+#. module: mmf
+#: model:ir.actions.act_window,name:mmf.request_service_wizard
+msgid "طلب الخدمات"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+#: model_terms:ir.ui.view,arch_db:mmf.service_wizard_form
+msgid "طلب خدمة"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,warrant_officer:0
+msgid "عريف"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "عقيد"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "عميد"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "فبراير"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "فريق"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "فريق اول"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.services_request_report
+msgid "لسنه"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "لواء"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "م.أول"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "مارس"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "مايو"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "مبدئي"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,warrant_officer:0
+msgid "متعاقد"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,warrant_officer:0
+msgid "مساعد"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "مقدم"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,category:0
+msgid "مكفول"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "ملازم"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.frequency_report_hospital
+msgid "من"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.report_monthly
+msgid "من سنه"
+msgstr ""
+
+#. module: mmf
+#: model_terms:ir.ui.view,arch_db:mmf.mmf_form_form
+msgid "موافق"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,officer:0
+msgid "نقيب"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "نوفمبر"
+msgstr ""
+
+#. module: mmf
+#: selection:mmf.form,warrant_officer:0
+msgid "و.عريف"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "يناير"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "يوليو"
+msgstr ""
+
+#. module: mmf
+#: selection:monthly.total,month:0
+#: selection:reprot.services.request,month:0
+msgid "يونيو"
+msgstr ""

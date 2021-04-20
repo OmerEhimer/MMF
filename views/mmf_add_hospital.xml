@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="mmf_add_hospitals" model="ir.actions.act_window">
+        <field name="name">Hospital</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_hospital','=', True)]</field>
+        <field name="context">{'default_is_hospital' : True}</field>
+    </record>
+
+    <menuitem id="mmf_config_menu" name="Configuration" parent="mmf_menu" sequence="4"  groups="mmf.group_department_admin_rule"/>
+    <menuitem id="mmf_add_hospital" name="Add Hospital" parent="mmf_config_menu" action="mmf_add_hospitals" sequence="4" groups="mmf.group_department_admin_rule"/>
+</odoo>

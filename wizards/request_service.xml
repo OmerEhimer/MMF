@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+      <record id="service_wizard_form" model="ir.ui.view">
+            <field name="name">request.service.form</field>
+            <field name="model">request.service</field>
+            <field name="arch" type="xml">
+                <form string="Request Service">
+                    <group>
+                        <field name="form_id" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="patient_name"/>
+                        <field name="attachment" widget="binary" filename="file_name"/>
+                        <field name="user_id" options="{'no_open': True, 'no_create': True}"/>
+                    </group>
+                    <notebook>
+                        <page name="service" string="Services">
+                            <field name="service_line_ids">
+                                <tree editable="button">
+                                    <field name="service_type_id" options="{'no_open': True, 'no_create': True}"/>
+                                    <field name="service_id" domain="[('service_type_id', '=', service_type_id)]" options="{'no_open': True, 'no_create': True}"/>
+                                    <field name="quantity"/>
+                                    <field name="update_price" readonly="1" invisible="1"/>
+                                    <field name="service_price" attrs="{'invisible':[('update_price', '=', True)]}"/>
+                                    <field name="new_service_price" attrs="{'invisible': [('update_price', '=', False)]}"/>
+                                </tree>
+                            </field>                            
+                        </page>
+                    </notebook>
+                    <footer>
+                         <!-- <button  name="print_report" string="Print" type="object" class="btn-primary"/> -->
+
+                        <button name="request_service" string="طلب خدمة" type="object" class="btn-primary"/>
+                        <button special="cancel" string="إلغاء"  class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="request_service_wizard" model="ir.actions.act_window">
+            <field name="name">طلب الخدمات</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">request.service</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="service_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+</odoo>

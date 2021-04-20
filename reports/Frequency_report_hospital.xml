@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="frequency_report_hospital">
+        <!-- <t t-call="web.internal_layout"> -->
+            <t t-call="web.html_container">
+                <t t-if="filter_data">
+                    <div class="page">
+                        <div class="oe_structure">
+                            <div class="row">
+                                <table align="center"  border="0" width="90%" >
+                                    <tr>
+                                        <td style="text-align:center; padding:10px !important;"><strong>بسم الله الرحمن الرحيم</strong></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td style="text-align:center; padding:10px !important;"><strong>قوات الدعم السريع</strong></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td style="text-align:center; padding:10px !important;"><strong> الصندوق التكافلي لتطوير الخدمات الطبية </strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center; padding:10px !important;"><strong>تقرير التردد</strong></td>
+                                    </tr>
+
+                                    <t t-foreach='docs' t-as="date_d">
+                                        <t t-if="condition">
+                                            
+                                        </t>
+                                        <t t-elif="date_d['date_start'] and date_d['end_date']">
+                                            <tr>
+                                                <td style="text-align:center; padding:10px !important;"><strong>
+                                                    من 
+                                                    <b><t t-esc="date_d['date_start']"/> </b>
+                                                    الي 
+                                                    <b><t t-esc="date_d['end_date']"/> </b>
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <t t-elif="date_d['date_start']">
+                                            <tr>
+                                                <td style="text-align:center; padding:10px !important;"><strong>
+                                                    بداية من تاريخ 
+                                                    <b><t t-esc="date_d['date_start']"/> </b>
+                                                    
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <t t-elif="date_d['end_date']">
+                                            <tr>
+                                                <td style="text-align:center; padding:10px !important;"><strong>
+                                                    الى تاريخ 
+                                                    <b><t t-esc="date_d['end_date']"/> </b>
+                                                    
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    
+                                    </t> 
+
+                                    <tr>
+                                        <td style="text-align:right; border-top:8px !important;">
+                                            <br />
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="table table-condensed" width="90%" >
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><strong>حالة الزيارة</strong></th>
+                                            <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><strong>السعر</strong></th>
+                                            <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><strong>التاريخ</strong></th>
+                                            <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><strong>أسم المستشفي</strong></th>
+                                            <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><strong>جهه التحويل</strong></th>
+                                            <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><strong>أسم المريض</strong></th>
+                                            <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><strong>ID</strong></th>
+                                        </tr>
+                                    </thead>  
+                                    <tbody>
+                                        <t t-foreach="filter_data" t-as="o">
+                                            <tr>
+                                            <t t-if="o['state']!='مغلقة'">
+                                                <td style="text-align:center;color:red">
+                                                    <t t-esc="o['state']"/>
+                                                </td>
+                                            </t>
+                                            <t t-else="">
+                                                <td style="text-align:center;color:green">
+                                                    <t t-esc="o['state']"/>
+                                                </td>
+                                            </t>
+                                        
+                                            
+                                                
+                                                <td style="text-align:center;">
+                                                    <t t-esc="o['price_total']"/>
+                                                </td>
+                                                
+                                                <td style="text-align:center;">
+                                                    <t t-esc="o['convertFormDate']" />
+                                                </td>
+
+                                                <td style="text-align:right;">
+                                                    <t t-esc="o['company_id']" />
+                                                </td>
+
+                                                <td style="text-align:right;">
+                                                    <t t-esc="o['department_id']" />
+                                                </td>
+
+                                                <td style="text-align:right;">
+                                                    <t t-esc="o['name_ar']" />
+                                                </td>
+                                                
+                                                <td style="text-align:center;">
+                                                    <t t-esc="o['name_seq']" />
+                                                </td>
+                                            </tr> 
+                                        </t>   
+                                    </tbody>  
+                                    <tr>
+                                        <td style="text-align:right; border-top:8px !important;">
+                                            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                        </td>
+                                    </tr>      
+                                </table>
+
+                               <table width="100%" dir="rtl"  border="0">
+                                    <tr>
+                                        <td width="35%"></td>
+                                        <td width="35%"></td>
+                                        <td width="30%" style="text-align:right;width:50px;height:25px" ><span> طبيب  / </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"></td>
+                                        <td width="35%"></td>
+                                        <td width="30%" style="text-align:right;width:50px;height:25px" ><span>  حامد موسي حامد دوداي  </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"></td>
+                                        <td width="35%"></td>
+                                        <td width="30%" style="text-align:right;width:50px;height:25px" ><span>الصندوق التكافلي لتطوير الخدمات الطبية </span></td>
+                                    </tr>
+                                    <br/> <br/>
+                                </table> 
+                            </div>
+                        </div>
+                    </div>            
+                </t>
+                <t t-else="">
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+
+                    <div class="alert alert-danger" role="alert">
+                        Not Found
+                    </div>
+
+                    <!-- swal("Hello world!"); -->
+
+                    <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div> -->
+                </t>
+            </t>    
+    </template>
+</odoo>
+
+

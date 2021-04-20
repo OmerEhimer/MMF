@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    
+
+        <record id="mmf_inv_wizard_form" model="ir.ui.view">
+            <field name="name">mmf.inv.wiz.form</field>
+            <field name="model">mmf.inv.wiz</field>
+            <field name="arch" type="xml">
+                <form string="convert Service">
+                    <group>
+                        <field name="date" />
+                        <field name="form_id" />
+                    </group>
+                    <footer>
+                        <button name="create_invoice" type="object" string="Create Invoice" class="oe_highlight" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+      <record id="convert_service_wizard_form" model="ir.ui.view">
+            <field name="name">convert.service.form</field>
+            <field name="model">convert.service</field>
+            <field name="arch" type="xml">
+                <form string="convert Service">
+                    <group>
+                        <field name="form_id" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="patient_name"/>
+                        <field name="hospital_id" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="attachment"/>
+                        <field name="user_id" options="{'no_open': True, 'no_create': True}"/>
+                    </group>
+                    <notebook>
+                        <page name="service" string="Services">
+                            <field name="service_line_ids">
+                                <tree editable="button">
+                                    <field name="service_type_id" options="{'no_open': True, 'no_create': True}"/>
+                                    <field name="service_id" domain="[('service_type_id', '=', service_type_id)]" options="{'no_open': True, 'no_create': True}"/>
+                                    <field name="quantity"/>
+                                    <field name="update_price" readonly="1" invisible="1"/>
+                                    <field name="service_price" attrs="{'invisible':[('update_price', '=', True)]}"/>
+                                    <!-- <field name="new_service_price" attrs="{'invisible': [('update_price', '=', False)]}"/> -->
+                                </tree>
+                            </field>                            
+                        </page>
+                    </notebook>
+                    <footer>
+                         <!-- <button  name="print_report" string="Print" type="object" class="btn-primary"/> -->
+
+                        <button name="convert_service" string="Convert" type="object" class="btn-primary"/>
+                        <button special="cancel" string="Cancel"  class="btn-primary"/>
+                    </footer>
+                </form>
+                
+            </field>
+        </record>
+
+        <record id="convert_service_wizard" model="ir.actions.act_window">
+            <field name="name">convert Service </field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">convert.service</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="convert_service_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+</odoo>

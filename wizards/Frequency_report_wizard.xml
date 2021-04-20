@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="create_frequencu_report" model="ir.ui.view">
+        <field name="name">Frequency Report</field>
+        <field name="model">frequency.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Frequency Report">
+                <group>
+                    <field name="report_by"/>
+                </group>
+                <group>
+                    <group>
+                         <field name="company_id" attrs="{'invisible':[('report_by', '!=', 'hospital')],'required':[('report_by', '=', 'hospital')]}"/>
+                         <field name="card_no" attrs="{'invisible':[('report_by', '!=', 'patient')],'required':[('report_by', '=', 'patient')]}"/>
+                    </group>
+                    <group>
+                        <field name="date_start"/>
+                        <field name="end_date"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="frequencu_report_action" model="ir.actions.act_window">
+        <field name="name">Frequency Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">frequency.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="create_frequencu_report"/>
+        <field name="target">new</field>       
+    </record>
+
+    <menuitem id="menu_report" name="Report" parent="mmf_menu" />
+    <menuitem id="Frequency_report" parent="menu_report" name="Frequency Report" action="frequencu_report_action" />
+</odoo>

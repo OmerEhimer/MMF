@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="services_request_report">
+        <!-- <t t-call="web.external_layout"> -->
+            <t t-call="web.html_container">
+                <t t-if="filter_data_request">
+                    <div class="page">
+                            <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <div style="text-align:center" class="col-sm">
+                                        <div ><h4><strong>بسم الله الرحمن الرحيم </strong></h4></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div style="text-align:center" class="col-sm">
+                                    <h3 style="text-align:center;"><strong>قوات الدعم السريع</strong></h3>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div style="text-align:center" class="col-sm">
+                                    <h4 style="text-align:center;"><strong>صندوق التكافل لتطوير الخدمات الطبية</strong></h4>
+                                    </div>
+                                </div>
+
+                                <t t-foreach='docs' t-as="data_fetch">
+                                    <h4 style="text-align:center;"><strong> <b><bdi><t t-esc="data_fetch['company_id']"/></bdi></b> تقرير طلب الخدمات  </strong></h4>
+                                    <h4 style="text-align:center;"><strong>شهر <t t-esc="data_fetch['month']"/>  لسنه 
+                                    <t t-esc="data_fetch['year']"/></strong></h4>
+                                </t>
+                            </div>
+                            <t t-foreach="filter_data_request" t-as="r">
+
+                                <table lass="table table-sm o_main_table" align="right"  border="0" width="100%" >
+                                    <tr>
+                                        <td  colspan="3" style="text-align:right; border-top:8px !important;">
+                                            <b><u><strong> :  بيانات الاستمارة </strong> </u></b>
+                                        </td>
+                                    </tr>
+
+                                    <tr><td style="text-align:right; border-top:8px !important;"><p></p></td></tr>
+
+                                    <tr>
+                                        <td style="text-align:right; border-top:8px !important;">
+                                            <t t-esc="r['convertFormDate']"/> <strong> : تـــاريخ الزيــارة </strong>
+                                        </td>
+
+                                        <td style="text-align:right; border-top:8px !important;">
+                                        <bdi> <t t-esc="r['convert_type']"/> </bdi> <strong> :  نـــوع الزيــارة </strong>
+                                        </td>
+
+                                        <td style="text-align:right; border-top:8px !important;">
+                                        <bdi><t t-esc="r['name_seq']"/></bdi>  <strong> : رقم الاستمارة   </strong> 
+                                        </td>
+                                    </tr>
+
+                                    <tr><td style="text-align:right; border-top:8px !important;"><p></p></td></tr>
+
+                                    <tr>
+                                        <td colspan="3" style="text-align:right; border-top:8px !important;">
+                                            <bdi> <t t-esc="r['user_id']"/></bdi><strong> :  أسم المنــدوب   </strong> 
+                                        </td>
+                                    </tr>
+
+                                        <tr><td style="text-align:right; border-top:8px !important;"><p></p></td></tr>
+
+                                    <tr>
+                                        <td colspan="3" style="text-align:right; border-top:8px !important;">
+                                            <b><u><strong> : بيانــات المـريـض </strong> </u></b>
+                                        </td>
+                                    </tr>
+
+                                    <tr><td style="text-align:right; border-top:8px !important;"><p></p></td></tr>
+
+                                    <tr>
+                                        <td style="text-align:right; border-top:8px !important;">
+                                            <strong>العمر :   </strong> <t t-esc="r['Age']"/>
+                                        </td>
+
+                                        <td style="text-align:right; border-top:8px !important;">
+                                            <bdi><t t-esc="r['gender']"/></bdi> <strong> :  النـــوع </strong> 
+                                        </td>
+
+                                        <td style="text-align:right; border-top:8px !important;">
+                                        <bdi><t t-esc="r['name_ar']"/></bdi>  <strong>  :   أسم المريض </strong> 
+                                        </td>
+                                    </tr>
+
+                                    <tr><td style="text-align:right; border-top:8px !important;"><p></p></td></tr>
+
+                                    <tr>
+                                        <td colspan="3" style="text-align:right; border-top:8px !important;">
+                                            <b> <bdi><t t-esc="r['initial_diagnosis']"/></bdi> <u><strong>   :   التشخيـــص المـبدئي </strong> </u></b> 
+                                        </td>
+                                    </tr>
+
+                                    <tr><td style="text-align:right; border-top:8px !important;"><p></p></td></tr>
+
+                                    <tr>
+                                        <td colspan="3" style="text-align:right; border-top:8px !important;">
+                                            <b> <bdi><t t-esc="r['end_diagnosis']"/></bdi> <u><strong>   :   التشخيـــص النهائي  </strong> </u></b> 
+                                        </td>
+                                    </tr>
+
+                                    <tr><td style="text-align:right; border-top:8px !important;"><p></p></td></tr>
+                                </table> 
+
+                                <table  align="center" width="100%" >
+                                    <thead>
+                                        <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><b> السعــر </b></th>
+                                        <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><b> الخـدمــة </b></th>
+                                        <th style="text-align:center; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"><b> # </b></th>
+                                    </thead>
+
+                                    <t t-foreach="r['service_types']" t-as="type_service"> 
+                                    
+                                        <tr>
+                                            <td colspan="3" style="text-align:right; background-color:#4d4d33; color:#FFF; padding:6px; border:0.4px #FFF solid;"> 
+                                                <b> : <t t-esc="type_service['name']" /> </b>
+                                            </td>
+                                        </tr> 
+                                        <t t-set="i" t-value="1" />
+                                        <t t-foreach="r['services']" t-as="x">
+                                            
+                                                <t t-if="type_service['id'] == x['service_type_id']">
+                                                    <tr >
+                                                        <td class="text-center;" style="text-align:center; padding:6px;"> 
+                                                            <t t-esc="x['service_price']" />
+                                                        </td>
+                                                        <td class="text-right" style="text-align:right; padding:6px;"> 
+                                                            <t t-esc="x['service_id']" />
+                                                        </td>
+                                                        <td class="text-center;" style="text-align:center; padding:6px;"> 
+                                                            <t t-esc="i" />
+                                                            <t t-set="i" t-value="i+1"/> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr><td colspan="3" style="border-bottom:1px #8c8c8c solid;"></td></tr>
+                                                </t>       
+                                        </t>    
+                                    </t>
+                                </table>
+                                <p style="page-break-before:always;"> </p> 
+                            </t> 
+                               <table width="100%" dir="rtl"  border="0">
+                                    <tr>
+                                        <td style="text-align:right; border-top:8px !important;">
+                                            <br /><br />
+                                        </td>
+                                    </tr> 
+                                    <tr>
+                                        <td width="35%"></td>
+                                        <td width="35%"></td>
+                                        <td width="30%" style="text-align:right;width:50px;height:25px" ><span> طبيب  / </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"></td>
+                                        <td width="35%"></td>
+                                        <td width="30%" style="text-align:right;width:50px;height:25px" ><span> حامد موسي حامد دوداي </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"></td>
+                                        <td width="35%"></td>
+                                        <td width="30%" style="text-align:right;width:50px;height:25px" ><span>الصندوق التكافلي لتطوير الخدمات الطبية </span></td>
+                                    </tr>
+                                    <br/> <br/>
+                                </table> 
+                            </div>
+                            <div class="footer " style="text-align:center;">
+                                <span class="page"/>  -  <span class="topage" />
+                            </div>
+                    </div> 
+                </t>    
+                <t t-else="">
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+                    <br /> 
+
+                    <div class="alert alert-danger" role="alert">
+                        Not Found
+                    </div>      
+                </t>
+            </t> 
+        <!-- </t>         -->
+    </template>
+</odoo>
+
+

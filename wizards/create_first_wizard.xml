@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="create_first_Wizard" model="ir.ui.view">
+        <field name="name">create first Wizard</field>
+        <field name="model">create.first.wizard</field>
+        <field name="arch" type="xml">
+            <form string="create first Wizard">
+                <group>
+                    <group>
+                         <field name="gender"/>
+                    </group>
+                    <group>
+                        <field name="date_start"/>
+                        <field name="end_date"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="print_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="create_first_Wizards" model="ir.actions.act_window">
+        <field name="name">Create First Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">create.first.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="create_first_Wizard"/>
+        <field name="target">new</field>       
+    </record>
+
+    <!-- <menuitem id="create_first_wizard" parent="menu_report" name="Frequency Report" action="create_first_Wizards" sequence="4"/> -->
+</odoo>

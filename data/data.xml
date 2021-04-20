@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="patient_xyz" model="hospital.patient">
+            <field name="patient_name">XYZ</field>
+            <field name="patient_age">75</field>
+        </record>
+
+
+    </data>
+</odoo>

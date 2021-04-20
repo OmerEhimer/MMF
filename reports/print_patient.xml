@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_patient">
+        <t t-call="web.internal_layout">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                   <h2>patient cards</h2>
+                    patient : <t t-esc="doc.patient_name"/><br/>
+                    Age : <t t-esc="doc.patient_age"/><br/>
+                    Notes : <t t-esc="doc.notes"/><br/>
+                    Gander : <t t-esc="doc.gander"/><br/>
+                    <img  t-if="doc.image" t-att-src="'data:image/png;base64,%s' % to_text(doc.image)" height="120" border="1" width="120"/>
+                   
+                   <!-- start code How To Add Barcode To Report in Odoo -->
+                    <table class="table table-bordered mb-0" style="border: 2px solid black;">
+                            <tr>
+                                <td class="text-center align-middle" style="height: 6rem">
+                                        <img alt="Barcode"  t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.patient_name, 600, 150)" style="width:100%;height::4rem;"/>
+                                        <span t-field="doc.patient_name"/>
+                                </td>
+                            </tr>
+                        </table>
+                    <!-- End Code How To Add Barcode To Report in Odoo -->
+
+                    <!-- How To Call A Python Function While Printing PDF Report in Odoo -->
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <t t-foreach="appointment_list" t-as="app">
+                            <tr>
+                                <td>
+                                    <t t-esc="app['patient_age']" />
+                                </td>
+                                <td>
+                                    <t t-esc="app['notes']" />
+                                </td>
+                                <td>
+                                    <t t-esc="app['appointment_date']" />
+                                </td>
+                            </tr> 
+                        </t>       
+                    </table>
+                </t>
+            </t>
+        </t>    
+    </template>
+</odoo>
+
+

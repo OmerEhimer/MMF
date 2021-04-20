@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="mmf_form_form" model="ir.ui.view">
+        <field name="name">mmf.form.form</field>
+        <field name="model">mmf.form</field>
+        <field name="arch" type="xml">
+            <form string="Convert Form">
+                <header>
+                 <button name="%(mmf.request_service_wizard)d" type="action" string="طلب خدمة"
+                            class="oe_highlight" context="{'default_form_id':id}"  states="approve,wait_manager"/>
+
+                <button name="%(mmf.convert_service_wizard)d" type="action" string="تحويل" 
+                            class="oe_highlight" context="{'default_form_id':id}"  attrs="{'invisible' : [('state', 'in', ['draft', 'close'])]}"/>
+                            
+                <button name="action_draft" type="object" string="مبدئي" class="oe_highlight"  states="approve,confirm"/>
+                <button name="action_approve" type="object" string="موافق" class="oe_highlight" states="draft,request_processed"/>  
+                <button name="action_confirm" type="object" string="تصديــق" class="oe_highlight" states="approve"/>  
+                <button name="action_close" type="object" string="إغلاق" class="oe_highlight" states="confirm" />  
+                <button name="action_invoiced" type="object" string="فوتره"  class="oe_highlight" states="confirm,wait_manager" />  
+
+                <button name="action_manager_approve" type="object" string=" تصديق المدير" groups="mmf.group_department_admin_rule" class="oe_highlight" states="wait_manager" />  
+
+                <button name="action_manager_reject" type="object" string="رفض"   groups="mmf.group_department_admin_rule" class="oe_highlight" states="wait_manager" />  
+                <!-- groups="mmf.group_mmf_department_user" -->
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="count_service_line"  type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="count_invoice_line"  widget="statinfo" />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                                <h2>
+                                <!-- <label for="name_seq"/> -->
+                                <field name="name_seq" />
+                                </h2>
+                    </div>		
+                    <div class="oe_title">
+                                <h2>
+                                <label for="name_ar"/>
+                                <field name="name_ar" attrs="{'required':[('convert_type','!=','emergency')]}"/>
+                                </h2>
+                    </div>		
+                                <!-- <group col="8">
+                                    <field name="first_name" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                    <field name="middle_name" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                    <field name="last_name" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                    <field name="fourth_name" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                    
+                                </group> -->
+                               <group col="4">
+                                   <field name="convert_type" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                   <field name="convertFormDate" 
+                                   options="{'datepicker': {'minDate':0}}" attrs="{'readonly':[('state', '!=', 'draft')]}"
+                                   />
+                                   
+                                    <!-- <field name="month"/>
+                                    <field name="year"/> -->
+                                    <field name="department_id" attrs="{'readonly':[('state', '!=', 'draft')] ,'required':[('convert_type','!=','emergency')]}" options="{'no_open': True, 'no_create': True}"/>
+                                   <field name="hospital_id" options="{'no_open': True, 'no_create': True}"/>
+                                   <field name="user_id" options="{'no_open': True, 'no_create': True}"/>
+                                   <field name="company_id" options="{'no_open': True, 'no_create': True}"/>
+                                   <!-- <field name="need_approve"/> -->
+                               </group>
+                                <notebook>
+                                    <page string="البيانات الشخصية" >
+                                    <group >
+                                    <group>
+                                        <field name="gender" attrs="{'readonly':[('state', '!=', 'draft')], 'required':['|',('convert_type','!=','emergency'),('state','=','confirm')]}"/>
+                                        <field name="Age" attrs="{'readonly':[('state', '!=', 'draft')] , 'required':[('convert_type','!=','emergency')]}"/>
+                                        <field name="phone" attrs="{'readonly':[('state', '!=', 'draft')] ,'required':[('convert_type','!=','emergency')]}"/>
+                                        <field name="location" attrs="{'readonly':[('state', '!=', 'draft')], 'required':[('convert_type','!=','emergency')]}"/>
+                                        
+                                    </group>
+                                    <group>
+                                        <field name="card_no" attrs="{'readonly':[('state', '!=', 'draft')] ,'required':[('convert_type','!=','emergency')]}"/>
+                                        <field name="category" attrs="{'readonly':[('state', '!=', 'draft')], 'required':[('convert_type','!=','emergency')]}"/>
+                                        <field name="officer" attrs="{'required':[('convert_type','!=','emergency')],'readonly':[('state', '!=', 'draft')],'invisible':[('category', '!=', '1')],'required':[('category', '=', '1')]}"/>
+                                        <field name="warrant_officer" attrs="{'required':[('convert_type','!=','emergency')],'readonly':[('state', '!=', 'draft')],'invisible':[('category', '!=', '2')],'required':[('category', '=', '2')]}"/>
+                                        <field name="relation_type" attrs="{'required':[('convert_type','!=','emergency')],'readonly':[('state', '!=', 'draft')],'invisible':[('category', '!=', '3')],'required':[('category', '=', '3')]}"/>
+                                    </group>
+                                       
+                                    </group>
+                                    </page>
+                                    <page string="البيانات الطبية">
+                                    <group>
+                                        <field name="initial_diagnosis" attrs="{'readonly':[('state', '!=', 'draft')] , 'required':[('convert_type','!=','emergency')]}"/>
+                                        <field name="end_diagnosis"  attrs="{'invisible':[('state', '!=','confirm')], 'required':[('state','=','confirm')]}" />
+                                        <!-- <field name="doctor_report" attrs="{'readonly':[('state', 'in', ('confirm','close'))],'required':[('state', '=', 'approve')]}"/> -->
+                                    </group>
+                                        <!-- <field name="initial_diagnosis"/> -->
+                                    </page>
+                                     <page string="الخدمات المطلوبة">
+                                       <field name="service_line" readonly="1">
+                                            <tree editable="button">
+                                                <field name="service_type_id"  options="{'no_create_edit':True,'no_create':True,'no_open':True}"/>
+                                                <field name="service_id" domain="[('service_type_id', '=', service_type_id)]" options="{'no_create_edit':True,'no_create':True,'no_open':True}"/>
+                                                <!-- <field name="need_approve"/> -->
+                                                <field name="serviceDate"/>
+                                                <field name="attachment" widget="binary" />
+                                                <!-- <field name="doctor_report"/> -->
+                                                <field name="created_by"/>
+                                                <field name="approved_by"/>
+                                                <field name="service_price"/>
+                                                <field name="quantity"/>
+                                                <field name="discount"/>
+                                                <field name="total"/>
+                                                <field name="date_done"/>                      
+                                                <field name="patient_amount"/>                      
+                                                <field name="state"/>
+                                                <button name="action_done" type="object" string="Done" class="oe_highlight" states="draft" />
+                                                <button name="action_delete" type="object" string="Delete" class="oe_highlight" states="draft" />
+                                                <field name="form_id" invisible="1"/>
+                                            </tree>
+                                            <form>
+                                                <group>
+                                                    <group>
+                                                        <field name="form_id" options="{'no_create_edit':True,'no_create':True,'no_open':True}"/>
+                                                    </group>
+                                                    
+                                                </group>
+                                                
+                                            </form>
+                                        </field>
+                                        <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                            <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                                <label for="price_total" />
+                                            </div>
+                                            <field name="price_total" nolabel="1" class="oe_subtotal_footer_separator" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                        </group>
+                                    </page>
+                                    <page string="خدمات في إنتظار التصديق">
+                                       <field name="service_wait_line" >
+                                            <tree editable="button">
+                                                <field name="service_type_id"  options="{'no_create_edit':True,'no_create':True,'no_open':True}"/>
+                                                <field name="service_id" domain="[('service_type_id', '=', service_type_id)]" options="{'no_create_edit':True,'no_create':True,'no_open':True}"/>
+                                                <field name="service_price"/>
+                                                <field name="attachment" widget="binary"/>
+                                                <field name="created_by"/>                      
+                                                <field name="state"/>                      
+                                                <field name="form_id" invisible="1"/>
+                                                <button name="action_delete" type="object" string="Delete" class="oe_highlight" states="wait,approved" />
+                                            </tree>
+                                            <form>
+                                                <group>
+                                                    <group>
+                                                        <field name="form_id" options="{'no_create_edit':True,'no_create':True,'no_open':True}"/>
+                                                    </group>
+                                                    
+                                                </group>
+                                                
+                                            </form>
+                                        </field>
+                                        
+                                    </page>
+                                    <page string="الفواتير">
+                                        <group string="Invoices">
+                                            <field name="related_invoice_ids" readonly="1" nolabel="1"/>
+                                        </group>                                        
+                                    </page>
+                                </notebook>
+                </sheet>
+                
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+                
+            </form>
+        </field>
+    </record>
+    
+    <record id="mmf_form_tree" model="ir.ui.view">
+        <field name="name">mmf.form.tree</field>
+        <field name="model">mmf.form</field>
+        <field name="arch" type="xml">
+            <tree string="Convert Form" decoration-info="state in ('approve')"
+            decoration-muted="state=='close'" decoration-success="state in ('request_processed')" decoration-bf="state in ('confirm')" decoration-danger="state in ('wait_manager','draft')" >
+                <field name="name_seq" />
+                <field name="name_ar" />
+                <field name="category"/>
+                <field name="gender"/>
+                <field name="Age"/>
+                <field name="month"/>
+                <field name="year"/>
+                <field name="hospital_id"/>
+                <field name="price_total"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="mmf_form_action" model="ir.actions.act_window">
+        <field name="name">Convert Form</field>
+        <field name="res_model">mmf.form</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="mmf_form_search" model="ir.ui.view">
+        <field name="name">mmf.form.search</field>
+        <field name="model">mmf.form</field>
+        <field name="arch" type="xml">
+            <search string="Convert Form">
+                <field name="name_ar" />
+                <field name="name_seq" />
+                <field name="category"/>
+                <field name="gender"/>
+                <field name="Age"/>
+                <separator />
+                     <group expand="0" string="Group By">
+						<filter string="Company" name="group_by_company_id" context="{'group_by':'company_id'}"/>
+					</group>
+                    <group expand="0" string="Group By">
+						<filter string="Year" name="group_by_year" context="{'group_by':'year'}"/>
+					</group>
+                    <group expand="0" string="Group By">
+						<filter string="Month" name="group_by_month" context="{'group_by':'month'}"/>
+					</group>
+                    <group expand="0" string="Group By">
+						<filter string="Category" name="group_by_category" context="{'group_by':'category'}"/>
+					</group>
+            </search>
+        </field>
+    </record>
+
+    <menuitem id="mmf_menu" name="Mutual Medical Fund"  sequence="0"/>
+    <menuitem id="mmf_form_menu" name="Convert Form" parent="mmf_menu" action="mmf_form_action" sequence="3"/>
+
+</odoo>

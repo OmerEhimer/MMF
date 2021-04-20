@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="reprot_services_requests" model="ir.ui.view">
+        <field name="name">Report Services Request</field>
+        <field name="model">reprot.services.request</field>
+        <field name="arch" type="xml">
+            <form string="Report Services Request">
+                <group>
+                    <group>
+                         <field name="company_id"/>
+                    </group>
+                    <group>
+                        <field name="year"/>
+                        <field name="month"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="reprot_services_request_action" model="ir.actions.act_window">
+        <field name="name">Report Services Request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">reprot.services.request</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="reprot_services_requests"/>
+        <field name="target">new</field>       
+    </record>
+
+    <menuitem id="menu_report" name="Report" parent="mmf_menu" />
+    <menuitem id="reprot_services_request" parent="menu_report" name="Report Services request" action="reprot_services_request_action" />
+</odoo>

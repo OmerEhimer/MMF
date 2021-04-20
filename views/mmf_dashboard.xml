@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>  
+  <!-- smart button by Action draft -->
+    <record model="ir.actions.act_window" id="dashboard_draft_mmf">
+        <field name="name">Draft</field>
+        <field name="res_model">mmf.form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('hospital_id','=',active_id),('state','=','draft')]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- smart button by Action draft -->
+    <record model="ir.actions.act_window" id="dashboard_approve_mmf">
+        <field name="name">approve</field>
+        <field name="res_model">mmf.form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('hospital_id','=',active_id),('state','=','approve')]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- smart button by Action wait -->
+    <record model="ir.actions.act_window" id="dashboard_wait_mmf">
+        <field name="name">wait</field>
+        <field name="res_model">mmf.form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('hospital_id','=',active_id),('state','=','wait_manager')]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- smart button by Action close -->
+    <record model="ir.actions.act_window" id="dashboard_close_mmf">
+        <field name="name">close</field>
+        <field name="res_model">mmf.form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('hospital_id','=',active_id),('state','=','close')]</field>
+        <field name="context">{}</field>
+    </record>    
+
+    <!-- <record model="ir.ui.view" id="nama_model_form">
+        <field name="name">partner </field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page name="mmf-hospital" string="MMF-Hospital">
+                    <group>
+                        <field name="is_hospital" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record> -->
+
+    <record id="test_kanban_view" model="ir.ui.view">
+        <field name="name">mmf.form.kanban.view</field>
+            <field name="model">mmf.hospital.dashboard</field>
+            <field name="arch" type="xml">
+                <kanban >
+                 <field name="color" invisible="1"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                    oe_kanban_global_click_edit oe_semantic_html_override
+                                                    oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                                <div t-attf-class="oe_kanban_global_click ">
+                                    <div class="oe_dropdown_toggle">
+                                        <i class="fa fa-bars fa-lg" title="Manage" aria-label="Manage"/>
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                        <div class="row ">
+                                            <div t-attf-class="oe_kanban_global_click"> 
+                                                <div class="col-sm ">                             
+                                                    <div class="o_kanban_image">                                    
+                                                    <!-- <field name="logo" class="style_image" widget="image"/>                                 -->
+                                                    </div>
+                                                    <div class="col-sm ">
+                                                        <strong class="style_name_hospital "><field name="hospital_id" /></strong>
+                                                        <br /><p></p>
+                                                        <!-- Start code smart button  draft-->
+                                                        <div t-attf-class="oe_kanban_content"> 
+                                                            <div class="oe_button_box" name="button_box">
+                                                                <button name="%(dashboard_draft_mmf)d"  type="action" class="default mi_style_button" icon="fa-usd">
+                                                                    <field name="count_draft"  widget="statinfo" />
+                                                                </button>
+                                                                
+                                                                <p></p>
+                                                                <!-- Start code smart button  approve-->
+                                                                <button name="%(dashboard_approve_mmf)d"  type="action" class="info mi_style_button" icon="fa-usd">
+                                                                    <field name="count_approve"  widget="statinfo" />
+                                                                </button>
+                                                                
+                                                                <p></p>
+                                                                <!-- Start code smart button  wait-->
+                                                                <button name="%(dashboard_wait_mmf)d"  type="action" class="wait mi_style_button" icon="fa-usd">
+                                                                    <field name="count_wait"  widget="statinfo" />
+                                                                </button>
+
+                                                                <p></p>
+                                                                <!-- Start code smart button  wait-->
+                                                                <button name="%(dashboard_close_mmf)d"  type="action" class="success mi_style_button" icon="fa-usd">
+                                                                    <field name="count_close"  widget="statinfo" />
+                                                                </button>
+                                                                <p></p>
+                                                                <p class="this_month">
+                                                                 <field name="day_price" invisible="1"  widget="statinfo" />
+                                                                 </p>
+                                                                 <p></p>
+                                                                <p class="this_month">
+                                                                 <field name="month_price"  invisible="1"  widget="statinfo" />
+                                                                 </p>
+
+                                                            </div>  
+                                                        </div>   
+                                                    </div>     
+                                                </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </t>
+                    </templates>
+                </kanban>
+        </field>
+    </record>
+
+    
+    
+    <record id="mmf_hospital_dashboard_action" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">mmf.hospital.dashboard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Dashboard </p>
+        </field>
+    </record>
+
+    <menuitem id="mmf_menu" name="Mutual Medical Fund" sequence="0"/>
+    <menuitem id="mmf_dash_menu" name="Dashboard" parent="mmf_menu" action="mmf_hospital_dashboard_action" sequence="1"/>
+</odoo>

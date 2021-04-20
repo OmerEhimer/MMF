@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_monthly">
+        <!-- <t t-call="web.internal_layout"> -->
+            <t t-call="web.html_container">
+                <div class="page">
+                    <div class="oe_structure">
+                        <div class="row">
+                            <table align="center"  border="0" width="80%" > 
+                                <!-- class="table table-condensed" -->
+                                        <tr>
+                                            <td style="text-align:center; padding:10px !important;"><strong>بسم الله الرحمن الرحيم</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; padding:10px !important;"><strong>قوات الدعم السريع</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; padding:10px !important;"><strong> الصندوق التكافلي لتطوير الخدمات الطبية</strong></td>
+                                        </tr>
+                                        <t t-foreach='docs' t-as="o">
+                                            <tr>
+                                                <td style="text-align:center; padding:10px !important;">أستحقاق الخدمات لشهر 
+                                                    <strong><span t-esc="o['month']" /> من سنه  <span t-esc="o['year']" /> </strong>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align:right; padding:10px !important;">
+                                                   <bdi>
+                                                        السيــد  / مدير   
+                                                        <strong>
+                                                            <span t-esc="o['company_id']" />
+                                                        </strong>
+                                                    </bdi>    
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align:right; padding:10px !important;"><strong> 
+                                                إجمالي مبــلغ الخدمات المقدمة من طرفكم هو عباره عن ( <span t-esc="o['price']" /> ) <span t-esc="o['price_word']" />  جنيه سوداني لا غير 
+                                                </strong>
+                                                </td>
+                                            </tr>
+                                        </t>
+
+                                        <tr>
+                                            <td style="text-align:right; border-top:8px !important;">
+                                                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                  
+                            <table width="100%" dir="rtl"  border="0">
+                                <tr>
+                                    <td width="35%"></td>
+                                    <td width="35%"></td>
+                                    <td width="30%" style="text-align:right;width:50px;height:25px" ><span> طبيب  / </span></td>
+                                </tr>
+                                <tr>
+                                    <td width="35%"></td>
+                                    <td width="35%"></td>
+                                    <td width="30%" style="text-align:right;width:50px;height:25px" ><span> حامد موسي حامد دوداي </span></td>
+                                </tr>
+                                <tr>
+                                    <td width="35%"></td>
+                                    <td width="35%"></td>
+                                    <td width="30%" style="text-align:right;width:50px;height:25px" ><span>الصندوق التكافلي لتطوير الخدمات الطبية </span></td>
+                                </tr>
+                                <br/> <br/>
+                            </table> 
+                        </div>
+                    </div>
+                </div>            
+            </t>
+        <!-- </t>     -->
+    </template>
+</odoo>
+
+

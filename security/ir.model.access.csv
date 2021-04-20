@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mmf_form,access.mmf.form,model_mmf_form,,1,1,1,0
+access_mmf_service_type,access.mmf.service.type,model_mmf_service_type,,1,1,1,1
+access_mmf_service,access.mmf.service,model_mmf_service,,1,1,1,1
+access_mmf_service_lines,access.mmf.service.lines,model_mmf_service_lines,,1,1,1,1
+access_mmf_service_wait_lines,access.mmf.service.wait.lines,model_mmf_service_wait_lines,,1,1,1,1
+access_mmf_invoice,access.mmf.invoice,model_mmf_invoice,,1,1,1,0
+access_monthly_total,access.monthly.total,model_monthly_total,,1,1,1,1
+access_mmf_department,access.mmf.department,model_mmf_department,,1,1,1,1
+access_mm_inv_wiz,access_mm_inv_wiz,model_mmf_inv_wiz,,1,1,1,1
+access_mmf_hospital_dashboard,access_mmf_hospital_dashboard,model_mmf_hospital_dashboard,group_user_rule,1,0,0,0
+access_mmf_hospital_dashboard_admin,access_mmf_hospital_dashboard_admin,model_mmf_hospital_dashboard,group_department_admin_rule,1,1,1,1

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="mmf_invoice_form" model="ir.ui.view" >
+        <field name="name">mmf.invoice.form</field>
+        <field name="model">mmf.invoice</field>
+        <field name="arch" type="xml">
+            <form string="invoice Type" create="false" edit="false">
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h2>
+                        <!-- <label for="name"/> -->
+                        <field name="name_seq" />
+                        </h2>
+                        <group col="4">
+                                <field name="patient_name"/>
+                                <field name="form_id"/>
+                                <field name="convertFormDate"/>
+                                <field name="convert_type"/>
+                                <field name="month"/>
+                                <field name="year"/>
+                                <field name="price"/>
+                                <field name="hospital_id"/>
+                                <field name="user_id" options="{'no_open': True, 'no_create': True}"/>
+                            </group>
+                    </div>			
+                               
+                </sheet>
+                
+                <div class="oe_chatter">
+                    <!-- <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity"/> -->
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+                
+            </form>
+        </field>
+    </record>
+    <record id="mmf_invoice_tree" model="ir.ui.view">
+        <field name="name">mmf.invoice.tree</field>
+        <field name="model">mmf.invoice</field>
+        <field name="arch" type="xml">
+            <tree string="invoice Type" create="false" edit="false" >
+                 <field name="name_seq" />
+                <field name="patient_name"/>
+                <field name="form_id"/>
+                <field name="convert_type"/>
+                <field name="convertFormDate"/>
+                <field name="month"/>
+                <field name="year"/>
+                <field name="hospital_id"/>
+                <field name="price" sum="Total"/>
+            </tree>
+        </field>
+    </record>
+    <record id="mmf_invoice_action" model="ir.actions.act_window">
+        <field name="name">invoice</field>
+        <field name="res_model">mmf.invoice</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record id="mmf_invoice_search" model="ir.ui.view">
+        <field name="name">mmf.invoice.search</field>
+        <field name="model">mmf.invoice</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name_seq" />
+                <field name="patient_name"/>
+                <field name="form_id"/>
+                <field name="convert_type"/>
+                <!-- <field name="convertFormDate"/> -->
+                <field name="month"/>
+                <field name="hospital_id"/>
+                <field name="price"/>
+                <separator />
+                     <group expand="0" string="Group By">
+						<filter string="Hospital" name="group_by_company_id" context="{'group_by':'hospital_id'}"/>
+					</group>
+                    <group expand="0" string="Group By">
+						<filter string="Month" name="group_by_month" context="{'group_by':'month'}"/>
+					</group>
+            </search>
+        </field>
+    </record>
+
+    <menuitem id="mmf_invoice_menu" name="invoice" parent="mmf_menu" action="mmf_invoice_action" sequence="2"/>
+</odoo>
