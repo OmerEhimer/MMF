@@ -14,7 +14,7 @@
                                         <h2 style="text-align:center;"><b>بسم الله الرحمن الرحيم</b></h2>
                                         <h2 style="text-align:center;"><b>قوات الدعم السريع</b></h2>
                                         <h3 style="text-align:center;"><b> الصندوق التكافلي لتطوير الخدمات الطبية </b></h3>
-                                        <h3 style="text-align:center;"> <b><t t-esc="o['company_id'].name"/> </b></h3>
+                                        <h3 style="text-align:center;"> <b><t t-esc="o['hospital_id'].name"/> </b></h3>
                                         <h3 style="text-decoration:underline; text-align:center;"><b>طلب تقديم خدمة </b></h3>
                                     </td>
                                     <td width="20%">

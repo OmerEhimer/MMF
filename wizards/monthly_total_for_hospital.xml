@@ -7,7 +7,7 @@
             <form string="Monthly Total For Hospital">
                 <group>
                     <group>
-                         <field name="company_id"/>
+                         <field name="hospital_id" domain="[('is_hospital','=',True)]" options="{'no_open': True, 'no_create': True}"/>
                     </group>
                     <group>
                         <field name="year"/>

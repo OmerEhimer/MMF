@@ -6,7 +6,7 @@ from num2words import num2words
 class MonthlyTotalForHospital(models.TransientModel):
       _name = 'monthly.total'
 
-      company_id = fields.Many2one(string='Hospital', comodel_name='res.company', required=True, default=lambda self: self.env.user.company_id)
+      hospital_id = fields.Many2one(string='Hospital', comodel_name='res.partner', required=True, default=lambda self: self.env.user.hospital_id)
    
       def year_selection(self):
             year = 2020 # replace 2000 with your a start year
@@ -61,6 +61,12 @@ class ReportMonthlyTotalAbstract(models.AbstractModel):
             # print("+++++++++++++++++++++++++++++",obj)
 
             return word 
+      
+      def get_dates(self, year, month):
+            start = '%s-%s-01'%(year,month)
+            month = int(month)
+            end = month < 12 and '%s-%s-01'%(year,month+1) or '%s-01-01'%(year+1)
+            return start , end
 
       @api.model
       def _get_report_values(self, docids, data=None):
@@ -68,12 +74,12 @@ class ReportMonthlyTotalAbstract(models.AbstractModel):
             if not data.get('form'):
                   raise UserError('Not Fount')
 
-            company_id = ''
+            hospital_id = ''
             month = ''
             year = ''
       
-            if data['form']['company_id']:            
-                  company_id = data['form']['company_id']
+            if data['form']['hospital_id']:            
+                  hospital_id = data['form']['hospital_id']
 
             if data['form']['month']:            
                   month = data['form']['month']    #[0]
@@ -83,12 +89,11 @@ class ReportMonthlyTotalAbstract(models.AbstractModel):
 
             total = 0
 
-            if company_id and  month:
-            
-                  invoice_ids = self.env['mmf.invoice'].search([('company_id','=',company_id[0]),('month','=',month),('year','=',year)])
-                  if invoice_ids:
-                        total = sum(invoice['price'] for invoice in invoice_ids)
-
+            if hospital_id and  month:
+                  start , end = self.get_dates(year, month)
+                  inv_res = self.env.get('account.invoice').search([('date_invoice','>=',start),('date_invoice', '<', end),('partner_id', '=', hospital_id[0])])
+                  for inv in inv_res : total += inv.amount_total
+                  
                   if month =='1' :
                         month='يناير'
                   elif month=='2':
@@ -116,7 +121,7 @@ class ReportMonthlyTotalAbstract(models.AbstractModel):
             
             docs = []
             docs.append({
-                  'company_id': company_id[1],
+                  'hospital_id': hospital_id[1],
                   'month': month,
                   'year':year,
                   'price': float(total),

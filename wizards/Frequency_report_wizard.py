@@ -5,7 +5,8 @@ from odoo import models, fields, api
 class FrequencyReportWizard(models.TransientModel):
    _name = 'frequency.report.wizard'
 
-   company_id = fields.Many2one(string='Hospital', comodel_name='res.company',  default=lambda self: self.env.user.company_id)
+   hospital_id = fields.Many2one(string='Hospital', comodel_name='res.partner', required=True, default=lambda self: self.env.user.hospital_id)
+
    card_no = fields.Char(string='Card NO',track_visibility="always")
    report_by = fields.Selection([
         ('hospital', 'Hospital'),
@@ -21,18 +22,21 @@ class FrequencyReportWizard(models.TransientModel):
       }
      
       if self.report_by=='hospital':
-         selected = data['form']['company_id'][0]
+         selected = data['form']['hospital_id'][0]
          if self.date_start and self.end_date:
-            filter_data = self.env['mmf.form'].search([('company_id','=', self.company_id.id)
+            filter_data = self.env['mmf.form'].search([('hospital_id','=', self.hospital_id.id)
             ,('convertFormDate','>=', self.date_start),('convertFormDate','<=', self.end_date)])
+
          elif self.date_start:
-            filter_data = self.env['mmf.form'].search([('company_id','=', self.company_id.id)
+            filter_data = self.env['mmf.form'].search([('hospital_id','=', self.hospital_id.id)
             ,('convertFormDate','>=', self.date_start),])
+
          elif self.end_date:
-                filter_data = self.env['mmf.form'].search([('company_id','=', self.company_id.id)
+                filter_data = self.env['mmf.form'].search([('hospital_id','=', self.hospital_id.id)
             ,('convertFormDate','<=', self.end_date),])
+
          else:
-            filter_data = self.env['mmf.form'].search([('company_id','=', self.company_id.id)])
+            filter_data = self.env['mmf.form'].search([('hospital_id','=', self.hospital_id.id)])
       elif  self.report_by=='patient':
          selected = data['form']['card_no']
          if self.date_start and self.end_date:
@@ -63,7 +67,7 @@ class FrequencyReportWizard(models.TransientModel):
          elif fetch_v.state=='close':
                 state='تم اﻹغلاق '
          valus = {
-            'company_id':fetch_v.company_id.name,
+            'hospital_id':fetch_v.hospital_id.name,
             'name_seq':fetch_v.name_seq,
             'convertFormDate':fetch_v.convertFormDate,
             'price_total':fetch_v.price_total,
@@ -87,7 +91,7 @@ class FrequencyAbstract(models.AbstractModel):
 
       date_start =''
       end_date =''   
-      company_id=''
+      hospital_id=''
 
       date_start = data['form']['date_start']
       end_date = data['form']['end_date']

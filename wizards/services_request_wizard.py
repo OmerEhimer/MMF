@@ -5,8 +5,8 @@ from odoo import models, fields, api
 from num2words import num2words
 class ReprotServicesRequestWizard(models.TransientModel):
 	_name = 'reprot.services.request'
-	company_id = fields.Many2one(string='Choose Hospital', comodel_name='res.company', required=True, default=lambda self: self.env.user.company_id)
-	
+	hospital_id = fields.Many2one(string='Hospital', comodel_name='res.partner', required=True, default=lambda self: self.env.user.hospital_id)
+
 	def year_selection(self):
 		year = 2020 # replace 2000 with your a start year
 		year_list = []
@@ -17,7 +17,7 @@ class ReprotServicesRequestWizard(models.TransientModel):
 
 	year = fields.Selection(
 		year_selection,
-		string="Choose Year",
+		string="Year",
 		default="2021", # as a default value it would be 2019
 	) 
 
@@ -34,7 +34,7 @@ class ReprotServicesRequestWizard(models.TransientModel):
 		  ('10', 'أكتوبر'),
 		  ('11', 'نوفمبر'),
 		  ('12', 'ديسمبر'),
-		], string="Chooes Month")  
+		], string="Month")  
 
 	def get_service_types(self, form_id):
 		types = []
@@ -67,11 +67,11 @@ class ReprotServicesRequestWizard(models.TransientModel):
 			'form':self.read()[0]
 			}
 			 
-		company_id = data['form']['company_id'][0]
+		hospital_id = data['form']['hospital_id'][0]
 		month = data['form']['month']
 		year = data['form']['year']
 			 
-		filter_data_request = self.env['mmf.form'].search([('company_id','=', self.company_id.id)
+		filter_data_request = self.env['mmf.form'].search([('hospital_id','=', self.hospital_id.id)
 		,('year','=', year),('month','=', month)])
 		filter_service_type_request = self.env['mmf.service.type'].search([])
 			 
@@ -79,7 +79,7 @@ class ReprotServicesRequestWizard(models.TransientModel):
 		for fetch_req in filter_data_request:
 			valus = {
 				'id':fetch_req,
-				'company_id':fetch_req.company_id.name,
+				'hospital_id':fetch_req.hospital_id.name,
 				'month':fetch_req.month,
 				'year':fetch_req.year,
 				'name_seq':fetch_req.name_seq,

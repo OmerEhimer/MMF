@@ -10,7 +10,8 @@
                 </group>
                 <group>
                     <group>
-                         <field name="company_id" attrs="{'invisible':[('report_by', '!=', 'hospital')],'required':[('report_by', '=', 'hospital')]}"/>
+                         <field name="hospital_id" domain="[('is_hospital','=',True)]" options="{'no_open': True, 'no_create': True}"
+                          attrs="{'invisible':[('report_by', '!=', 'hospital')],'required':[('report_by', '=', 'hospital')]}"/>
                          <field name="card_no" attrs="{'invisible':[('report_by', '!=', 'patient')],'required':[('report_by', '=', 'patient')]}"/>
                     </group>
                     <group>

@@ -150,7 +150,7 @@ class MmfForm(models.Model):
                 vals = {
                     'product_id' : product_id.id,
                     'quantity' : line.quantity,
-                    'price_unit' : line.service_price * line.discount / 100.0,
+                    'price_unit' : line.discount > 0 and line.service_price * line.discount / 100.0 or line.service_price,
                     'name' : line.service_id.name,
                     'account_id' : product_id.property_account_expense_id.id
                 }
@@ -409,6 +409,32 @@ class SaleOrderInherit(models.Model):
     color = fields.Integer()
     is_hospital = fields.Boolean(string="Is Hospital")
 
+    @api.model
+    def create(self, vals):
+        obj = super(SaleOrderInherit, self).create(vals)
+        self.env.get('mmf.hospital.dashboard'). create({
+            'hospital_id' : obj.id
+        })
+        return obj
+
+    def unlink(self):
+        for obj in self:
+            self.env.get('mmf.hospital.dashboard').search([('hospital_id','=', obj.id)]).unlink()
+        return super(SaleOrderInherit, self).unlink()
+
+    def write(self, vals):
+        res = super(SaleOrderInherit, self).write(vals)
+        if 'is_hospital' in vals :
+            for obj in self :
+                if obj.is_hospital :
+                    self.env.get('mmf.hospital.dashboard'). create({
+                            'hospital_id' : obj.id
+                        })
+                else :
+                    self.env.get('mmf.hospital.dashboard').search([('hospital_id','=', obj.id)]).unlink()
+        return res
+
+
     @api.multi
     def get_draft_action(self): 
         for rec in self:   
@@ -484,4 +510,5 @@ class mmfServiceWaitLines(models.Model):
 
 class UsersInhert(models.Model):
     _inherit = 'res.users'
+
     hospital_id = fields.Many2one('res.partner',string="Hospital", default=lambda self:self.env.user.hospital_id.id)

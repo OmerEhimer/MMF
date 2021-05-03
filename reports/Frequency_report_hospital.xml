@@ -92,10 +92,7 @@
                                                 <td style="text-align:center;color:green">
                                                     <t t-esc="o['state']"/>
                                                 </td>
-                                            </t>
-                                        
-                                            
-                                                
+                                            </t>                        
                                                 <td style="text-align:center;">
                                                     <t t-esc="o['price_total']"/>
                                                 </td>
@@ -105,7 +102,7 @@
                                                 </td>
 
                                                 <td style="text-align:right;">
-                                                    <t t-esc="o['company_id']" />
+                                                    <t t-esc="o['hospital_id']" />
                                                 </td>
 
                                                 <td style="text-align:right;">

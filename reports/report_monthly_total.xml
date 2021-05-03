@@ -29,7 +29,7 @@
                                                    <bdi>
                                                         السيــد  / مدير   
                                                         <strong>
-                                                            <span t-esc="o['company_id']" />
+                                                            <span t-esc="o['hospital_id']" />
                                                         </strong>
                                                     </bdi>    
                                                 </td>

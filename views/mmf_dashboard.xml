@@ -36,7 +36,7 @@
         <field name="context">{}</field>
     </record>    
 
-    <!-- <record model="ir.ui.view" id="nama_model_form">
+    <record model="ir.ui.view" id="nama_model_form">
         <field name="name">partner </field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
@@ -49,7 +49,7 @@
                 </page>
             </xpath>
         </field>
-    </record> -->
+    </record>
 
     <record id="test_kanban_view" model="ir.ui.view">
         <field name="name">mmf.form.kanban.view</field>
